@@ -1,0 +1,28 @@
+{
+  "name": "proxy-wasm-as-rate-limiting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release"
+  },
+  "author": "Caio Ramos Casimiro caiorcasimiro@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@kong/proxy-wasm-sdk": "^0.0.3",
+    "json-as": "^0.5.65",
+    "visitor-as": "^0.11.4"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.25.2"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
