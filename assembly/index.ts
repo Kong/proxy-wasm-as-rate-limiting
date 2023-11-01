@@ -116,10 +116,6 @@ class RateLimitingRoot extends RootContext {
     return new RateLimitingHTTP(context_id, this);
   }
 
-  fillConfigStringDefaults(): void {
-    let config = this.config as Config;
-  }
-
   onConfigure(configuration_size: u32): bool {
     let ok = super.onConfigure(configuration_size);
     if (!ok) {
