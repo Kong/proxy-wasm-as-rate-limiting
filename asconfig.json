@@ -1,14 +1,14 @@
 {
   "targets": {
     "debug": {
-      "outFile": "build/debug.wasm",
-      "textFile": "build/debug.wat",
+      "outFile": "build/as_rate_limiting_debug.wasm",
+      "textFile": "build/as_rate_limiting_debug.wat",
       "sourceMap": true,
       "debug": true
     },
     "release": {
-      "outFile": "build/release.wasm",
-      "textFile": "build/release.wat",
+      "outFile": "build/as_rate_limiting.wasm",
+      "textFile": "build/as_rate_limiting.wat",
       "sourceMap": true,
       "optimizeLevel": 3,
       "shrinkLevel": 0,
