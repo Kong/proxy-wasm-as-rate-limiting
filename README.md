@@ -31,14 +31,14 @@ files in `build/`.
 
 ## Running
 
-Make sure to have the configuration parameter [wasm](https://docs.konghq.com/gateway/latest/reference/configuration/#webassembly-wasm-section)
+Make sure Kong configuration has the parameter [wasm](https://docs.konghq.com/gateway/latest/reference/configuration/#webassembly-wasm-section)
 set to `on` and the [injected nginx directive](https://docs.konghq.com/gateway/latest/reference/nginx-directives)
 `nginx_wasm_shm_kong_wasm_rate_limiting_counters` set
 to some reasonable value, e.g. `12m`. This [directive](https://github.com/Kong/ngx_wasm_module/blob/main/docs/DIRECTIVES.md#shm_kv)
 defines a shared key/value memory zone named `kong_wasm_rate_limiting_counters`
 that's used by the filter to share request counters between workers.
 
-The above configuration can be achieved with environment variables:
+The above configuration can be achieved using the environment variables:
  - `KONG_WASM=on`
  - `KONG_NGINX_WASM_SHM_KONG_WASM_RATE_LIMITING_COUNTERS=12m`
 
