@@ -1,0 +1,17 @@
+_format_version: "1.1"
+_transform: true
+
+services:
+- name: demo
+  url: http://httpbin.org/anything
+  routes:
+  - name: rate-limit
+    paths:
+    - /rated
+    strip_path: true
+    filter_chains:
+      - name: rate-limit-chain
+        enabled: true
+        filters:
+          - name: as_rate_limiting
+            config: '{"minute": 3}'
