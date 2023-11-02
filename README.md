@@ -32,7 +32,7 @@ files in `build/`.
 ## Running
 
 Make sure to have the configuration parameter [wasm](https://docs.konghq.com/gateway/latest/reference/configuration/#webassembly-wasm-section)
-set to `on` and the injected [nginx directive](https://docs.konghq.com/gateway/latest/reference/nginx-directives)
+set to `on` and the [injected nginx directive](https://docs.konghq.com/gateway/latest/reference/nginx-directives)
 `nginx_wasm_shm_kong_wasm_rate_limiting_counters` set
 to some reasonable value, e.g. `12m`. This [directive](https://github.com/Kong/ngx_wasm_module/blob/main/docs/DIRECTIVES.md#shm_kv)
 defines a shared key/value memory zone named `kong_wasm_rate_limiting_counters`
